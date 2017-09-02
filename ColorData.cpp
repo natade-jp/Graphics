@@ -1,4 +1,4 @@
-﻿#include <memory>
+﻿
 using namespace std;
 
 #ifndef DEFINED_CLASS_COLORDATA
@@ -9,20 +9,20 @@ using namespace std;
 
 class ColorData {
 private:
-	Color *pcColor = NULL;
+	Color *pcColor = nullptr;
 	Rect cRect;
 	
 public:
-	ColorData() {
+	ColorData(void) {
 	}
 	
-	~ColorData() {
+	~ColorData(void) {
 		this->dispose();
 	}
 	
-	void dispose() {
-		if(pcColor != NULL) delete pcColor;
-		pcColor	= NULL;
+	void dispose(void) {
+		if(pcColor != nullptr) delete[] pcColor;
+		pcColor	= nullptr;
 	}
 	
 	void setSize(int x, int y) {
@@ -32,7 +32,7 @@ public:
 	}
 	
 	void setColor(Color &color, int x, int y) {
-		if(pcColor == NULL) {
+		if(pcColor == nullptr) {
 			throw "exception";
 		}
 		unsigned long ulOffset = cRect.getOffset(x, y);
@@ -40,7 +40,7 @@ public:
 	}
 
 	void getColor(Color &color, int x, int y) {
-		if(pcColor == NULL) {
+		if(pcColor == nullptr) {
 			throw "exception";
 		}
 		unsigned long ulOffset = cRect.getOffset(x, y);

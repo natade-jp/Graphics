@@ -9,7 +9,7 @@ public:
 	int iWidth;
 	int iHeight;
 	
-	Rect() {
+	Rect(void) {
 		this->iWidth = 0;
 		this->iHeight = 0;
 	}
@@ -22,7 +22,7 @@ public:
 		this->setSize(iWidth, iHeight);
 	}
 	
-	~Rect() {
+	~Rect(void) {
 	}
 	
 	void setSize(Rect &rect) {
