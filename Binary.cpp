@@ -83,6 +83,20 @@ public:
 		return this->pucData[iOffset];
 	}
 	
+	void setByteArray(int iOffset, unsigned char *ucArray, int iArraySize) {
+		if((iOffset + iArraySize) >= this->iSize) {
+			this->setLength(iOffset + iArraySize);
+		}
+		memcpy(&(this->pucData[iOffset]), ucArray, iArraySize);
+	}
+	
+	unsigned char *getByteArray(int iOffset) {
+		if(iOffset >= this->iSize) {
+			throw "exception";
+		}
+		return &(this->pucData[iOffset]);
+	}
+	
 	void setUint8(int iOffset, unsigned char ucValue) {
 		this->setByte(iOffset, ucValue);
 	}
