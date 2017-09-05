@@ -66,14 +66,14 @@ public:
 		// ファイルを開く
 		fp = fopen(pcPath, "r" );
 		if(fp == NULL) {
-			syslog(LOG_ERR, "ERROR(%d) %s\n", errno, strerror(errno));
+			syslog(LOG_ERR, "ERROR(%d) %s", errno, strerror(errno));
 			return -1;
 		}
 		
 		// 先頭にシークする
 		iRet = fseek(fp, 0, SEEK_SET);
 		if(iRet == -1) {
-			syslog(LOG_ERR, "ERROR(%d) %s\n", errno, strerror(errno));
+			syslog(LOG_ERR, "ERROR(%d) %s", errno, strerror(errno));
 			fclose(fp);
 			return -1;
 		}
@@ -107,14 +107,14 @@ public:
 			fp = fopen(pcPath, "w" );
 		}
 		if(fp == NULL) {
-			syslog(LOG_ERR, "ERROR(%d) %s\n", errno, strerror(errno));
+			syslog(LOG_ERR, "ERROR(%d) %s", errno, strerror(errno));
 			return -1;
 		}
 		
 		// 先頭にシークする
 		iRet = fseek(fp, 0, SEEK_SET);
 		if(iRet == -1) {
-			syslog(LOG_ERR, "ERROR(%d) %s\n", errno, strerror(errno));
+			syslog(LOG_ERR, "ERROR(%d) %s", errno, strerror(errno));
 			fclose(fp);
 			return -1;
 		}

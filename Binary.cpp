@@ -9,7 +9,7 @@ using namespace std;
 #define DEFINED_CLASS_BINARY
 
 enum BinaryEndian {
-	LittleBigEndian	= 0,
+	LittleEndian	= 0,
 	BigEndian		= 1
 };
 

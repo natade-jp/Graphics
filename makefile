@@ -2,7 +2,7 @@
 
 # コンパイルしたいファイル
 Target = Main.cpp
-Library = Color.cpp ColorData.cpp Rect.cpp Binary.cpp
+Library = Color.cpp ColorData.cpp Rect.cpp Binary.cpp Bitmap.cpp
 
 # フォルダ名を実行ファイル名にする
 ExeName = $(lastword $(subst /, ,$(dir $(realpath $(Target)))))

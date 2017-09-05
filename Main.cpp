@@ -3,6 +3,7 @@
 #include "ColorData.cpp"
 #include "File.cpp"
 #include "Binary.cpp"
+#include "Bitmap.cpp"
 
 int main(void) {
 	
@@ -13,7 +14,7 @@ int main(void) {
 		
 		Binary binary;
 		
-		binary.setEndian(LittleBigEndian);
+		binary.setEndian(LittleEndian);
 		
 		binary.setUint32(0, 12345678);
 		printf("%ld\n", binary.getUint32(0));
