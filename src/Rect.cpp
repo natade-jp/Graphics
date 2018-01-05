@@ -38,11 +38,11 @@ public:
 		rect = *this;
 	}
 	
-	void getWidth() {
+	int getWidth() {
 		return this->iWidth;
 	}
 	
-	void getHeight() {
+	int getHeight() {
 		return this->iHeight;
 	}
 	
