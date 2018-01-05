@@ -4,10 +4,10 @@
 struct Rect {
 private:
 	
-public:
-	
 	int iWidth;
 	int iHeight;
+	
+public:
 	
 	Rect(void) {
 		this->iWidth = 0;
@@ -36,6 +36,14 @@ public:
 	
 	void getSize(Rect &rect) {
 		rect = *this;
+	}
+	
+	void getWidth() {
+		return this->iWidth;
+	}
+	
+	void getHeight() {
+		return this->iHeight;
 	}
 	
 	bool isInRect(int x, int y) {
